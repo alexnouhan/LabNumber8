@@ -33,9 +33,9 @@ public class LabNumber8 {
 
 			int userNum = getStuNum(scan);
 			int stuNum = userNum - 1;
-			go2 = true;
+			
 
-			while (go2) {
+			while (go) {
 				System.out.println();
 				System.out.println("Student " + userNum + " is " + studentsFull[stuNum]
 						+ ". What would you like to know about " + studentsFirst[stuNum] + "?");
@@ -57,11 +57,12 @@ public class LabNumber8 {
 				if (goNum == 1) {
 					continue;
 				} else if (goNum == 2) {
+					go = false;
 					break;
 				} else if (goNum == 3) {
 					System.out.println();
 					System.out.print("Which student would you like to learn more about? (enter a number 1-6): ");
-					go2 = false;
+					break;
 				}
 
 			}
